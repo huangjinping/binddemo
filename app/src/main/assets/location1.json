@@ -1,0 +1,253 @@
+{
+  "plus_code" : {
+    "global_code" : "8PHQ4W6H+X3"
+  },
+  "results" : [
+    {
+      "address_components" : [
+        {
+          "long_name" : "091乡道",
+          "short_name" : "091乡道",
+          "types" : [ "route" ]
+        },
+        {
+          "long_name" : "赤城县",
+          "short_name" : "赤城县",
+          "types" : [ "political", "sublocality", "sublocality_level_1" ]
+        },
+        {
+          "long_name" : "张家口市",
+          "short_name" : "张家口市",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "河北省",
+          "short_name" : "河北省",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "中国",
+          "short_name" : "CN",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "中国河北省张家口市赤城县091乡道",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 41.1318546,
+            "lng" : 115.9715115
+          },
+          "southwest" : {
+            "lat" : 41.121419,
+            "lng" : 115.9229796
+          }
+        },
+        "location" : {
+          "lat" : 41.1233466,
+          "lng" : 115.9454774
+        },
+        "location_type" : "GEOMETRIC_CENTER",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 41.1318546,
+            "lng" : 115.9715115
+          },
+          "southwest" : {
+            "lat" : 41.121419,
+            "lng" : 115.9229796
+          }
+        }
+      },
+      "place_id" : "ChIJU-JJCuJr9zUR0uMgWaLbeUI",
+      "types" : [ "route" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "赤城县",
+          "short_name" : "赤城县",
+          "types" : [ "political", "sublocality", "sublocality_level_1" ]
+        },
+        {
+          "long_name" : "张家口市",
+          "short_name" : "张家口市",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "河北省",
+          "short_name" : "河北省",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "中国",
+          "short_name" : "CN",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "中国河北省张家口市赤城县",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 41.38999039999999,
+            "lng" : 116.4658438
+          },
+          "southwest" : {
+            "lat" : 40.5127563,
+            "lng" : 115.4338791
+          }
+        },
+        "location" : {
+          "lat" : 40.912921,
+          "lng" : 115.831498
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 41.38999039999999,
+            "lng" : 116.4658438
+          },
+          "southwest" : {
+            "lat" : 40.5127563,
+            "lng" : 115.4338791
+          }
+        }
+      },
+      "place_id" : "ChIJJxDmbtVF9zUR6kuitGkLjs4",
+      "types" : [ "political", "sublocality", "sublocality_level_1" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "张家口市",
+          "short_name" : "张家口市",
+          "types" : [ "locality", "political" ]
+        },
+        {
+          "long_name" : "河北省",
+          "short_name" : "河北省",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "中国",
+          "short_name" : "CN",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "中国河北省张家口市",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.1496337,
+            "lng" : 116.4658438
+          },
+          "southwest" : {
+            "lat" : 39.5557403,
+            "lng" : 113.8193037
+          }
+        },
+        "location" : {
+          "lat" : 40.76754400000001,
+          "lng" : 114.886335
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.1496337,
+            "lng" : 116.4658438
+          },
+          "southwest" : {
+            "lat" : 39.5557403,
+            "lng" : 113.8193037
+          }
+        }
+      },
+      "place_id" : "ChIJexsbMjMk-jURtn1f1rfCNcE",
+      "types" : [ "locality", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "河北省",
+          "short_name" : "河北省",
+          "types" : [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name" : "中国",
+          "short_name" : "CN",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "中国河北省",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 42.6197176,
+            "lng" : 119.8725768
+          },
+          "southwest" : {
+            "lat" : 36.0482063,
+            "lng" : 113.4653687
+          }
+        },
+        "location" : {
+          "lat" : 37.8956594,
+          "lng" : 114.9042208
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 42.6197176,
+            "lng" : 119.8725768
+          },
+          "southwest" : {
+            "lat" : 36.0482063,
+            "lng" : 113.4653687
+          }
+        }
+      },
+      "place_id" : "ChIJ1YZMyjCpjDURIfse5yIKRWA",
+      "types" : [ "administrative_area_level_1", "political" ]
+    },
+    {
+      "address_components" : [
+        {
+          "long_name" : "中国",
+          "short_name" : "CN",
+          "types" : [ "country", "political" ]
+        }
+      ],
+      "formatted_address" : "中国",
+      "geometry" : {
+        "bounds" : {
+          "northeast" : {
+            "lat" : 53.5609739,
+            "lng" : 134.7754563
+          },
+          "southwest" : {
+            "lat" : 17.9996,
+            "lng" : 73.4994136
+          }
+        },
+        "location" : {
+          "lat" : 35.86166,
+          "lng" : 104.195397
+        },
+        "location_type" : "APPROXIMATE",
+        "viewport" : {
+          "northeast" : {
+            "lat" : 53.5609739,
+            "lng" : 134.7754563
+          },
+          "southwest" : {
+            "lat" : 17.9996,
+            "lng" : 73.4994136
+          }
+        }
+      },
+      "place_id" : "ChIJwULG5WSOUDERbzafNHyqHZU",
+      "types" : [ "country", "political" ]
+    }
+  ],
+  "status" : "OK"
+}

@@ -1,0 +1,2 @@
+include ':app', ':multitype-adapter', ':demo'
+rootProject.name='Uncash'

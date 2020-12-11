@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="onGet"
+        android:padding="@dimen/dimen_10"
+        android:text="分付君"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20sp"></Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:gravity="center"
+        android:onClick="onPost"
+        android:padding="@dimen/dimen_10"
+        android:text="onPost"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20sp"></Button>
+</LinearLayout>

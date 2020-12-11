@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://api.ferryindian.com/app/static/userservice?appName=MicroCash -->
+<html lang="en" style="font-size: 67.375px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>User Registration Protocol</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" href="http://fastcms.rong360.com/static/fastlend/images/plogo.png">
+
+
+    <script type="text/javascript">
+        (function(){var rem,dpr,time,doc=window.document,docEl=doc.documentElement,viewport=doc.querySelector('meta[name="viewport"]'),zoomScale,zoomScaleNum;if(viewport){zoomScale=viewport.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/);if(zoomScale){zoomScaleNum=parseFloat(zoomScale[2]);dpr=parseInt(1/zoomScaleNum)}}if(!dpr&&!zoomScaleNum){var os=(window.navigator.appVersion.match(/android/gi),window.navigator.appVersion.match(/iphone/gi)),dpr=window.devicePixelRatio;dpr=os?dpr>=3?3:dpr>=2?2:1:1;zoomScaleNum=1/dpr}window.addEventListener("resize",function(){clearTimeout(time);time=setTimeout(changeRem,300)},false);function changeRem(){var docWidth=docEl.getBoundingClientRect().width;rem=docWidth/320*20;docEl.style.fontSize=rem+"px"}changeRem()})();
+    </script>
+    <style>
+        html{
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd,form,fieldset,legend,blockquote,span{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        button,input,select,textarea{
+            appearance:none;
+            -webkit-appearance:none;
+            outline:none;
+        }
+        h1,h2,h3,h4,h5,h6,button,input,select,textarea{
+            font-size:100%;
+            font-weight:normal;
+        }
+        a {
+            text-decoration: none;
+            outline:none;
+        }
+        img{
+            border:0;
+        }
+        html,body{
+            height:100%;
+        }
+        body{
+            margin:0 auto;
+            font:.6rem/1.5 Arial,Helvetica,sans-serif;
+            background:#efeff4;
+            color:#432;
+        }
+        table,th,td{
+            border-collapse:collapse;
+        }
+        ul,li{
+            list-style:none;
+        }
+
+        .header{
+            background:#508cf0;
+            color:#fff;
+            height:1.75rem;
+            line-height: 1.75rem;
+            position: relative;
+            text-align: center;
+            display: none;
+        }
+        .header .icon-back{
+            position: absolute;
+            left:0;
+            top:0;
+            height:1.75rem;
+            width:1.75rem;
+            display:block;
+            text-align: center;
+        }
+        .header.ybfq-header {
+            background: #fff;
+            color: #666;
+        }
+        .header.ybfq-header .icon-back:after{
+            border-color: #999;
+        }
+        .header h1{
+            padding:0 2rem;
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size:.75rem;
+        }
+        .header .icon-back:after{
+            content:"";
+            position: absolute;
+            left:.6rem;
+            top:.625rem;
+            width:.5rem;
+            height:.5rem;
+            border:solid 1px #fff;
+            border-width: 0 0 1px 1px;
+            transform:rotate(45deg);
+        }
+        .wrap{
+            line-height:1.75;
+            font-size:.6rem;
+        }
+        .content{
+            padding:.75rem;
+        }
+        .wrap img{
+            border:0;
+            display: block;
+            margin:.5rem auto;
+            max-width:100%;
+        }
+        .notice-content{
+            background:url(/static/fastlend/images/notice-footer.png) center bottom no-repeat;
+            background-size:100% auto;
+            padding:.5rem .65rem 0;
+            margin-bottom:1rem;
+        }
+        .notice-content .inner{
+            padding:1.5rem .75rem 7.4rem;
+            background:url(/static/fastlend/images/notice-footer2.png) center bottom no-repeat,url(/static/fastlend/images/notice-linetop.png) center top no-repeat;
+            background-size:100% auto;
+            position: relative;
+            background-color:#fff;
+        }
+        .notice-content .auther{
+            position: absolute;
+            bottom:1rem;
+            left:0;
+            width:100%;
+            text-align: center;
+            color:#668;
+            font-size:.55rem;
+        }
+        .content_ybfq{
+            background:url(/static/fastlend/images/notice-footer.png) center bottom no-repeat;
+            background-size:100% auto;
+            padding:.5rem .65rem 0;
+            margin-bottom:1rem;
+        }
+        .content_ybfq .inner{
+            padding:1.5rem .75rem 7.4rem;
+            background:url(/static/fastlend/images/ybfq-footer2.png) center bottom no-repeat,url(/static/fastlend/images/notice-linetop.png) center top no-repeat;
+            background-size:100% auto;
+            position: relative;
+            background-color:#fff;
+        }
+        .content_ybfq .auther{
+            position: absolute;
+            bottom:1rem;
+            left:0;
+            width:100%;
+            text-align: center;
+            color:#668;
+            font-size:.55rem;
+        }
+        table,td,th{
+            border-collapse: collapse;
+        }
+
+        table{
+            width:100%;
+        }
+        td,th{
+            border:solid 1px #bababf;
+            font-size:.5rem;
+            padding:5px 2px;
+        }
+    </style>
+
+</head>
+<div class="head-bar" id="detect" style="background-color: rgb(240, 240, 240) !important; z-index: 99999 !important; font-size: 12px !important; color: rgb(51, 51, 51) !important; position: fixed; width: 100%; height: 36px; border-bottom: 1px solid rgb(193, 193, 193); border-top: 1px solid rgb(255, 255, 255);"><img id="baidu_fanyi_logo" src="chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/logo.png" style="position: fixed; left: 15px; top: 6px; height: 21px; width: 66px;"><pt id="detect-left-p" style="font-size: 12px !important; color: rgb(51, 51, 51) !important; position: fixed; left: 120px; top: 12px;">检测到当前网页不是中文网页，是否要翻译成中文？</pt><div id="select-translate-box"></div><div id="detect-translate" style="cursor: pointer !important; border-radius: 3px !important; color: white !important; font-size: 12px !important; text-align: center !important; line-height: 23px !important; padding: initial; position: fixed; margin: 0px; left: 430px; top: 7px; background-color: rgb(67, 149, 255); border: none; height: 23px; width: 60px;">翻译</div><div id="detect-no-translate" style="border-radius: 3px !important; cursor: pointer !important; font-size: 12px !important; color: rgb(51, 51, 51) !important; text-align: center !important; line-height: 23px !important; padding: initial; position: fixed; margin: 0px; left: 500px; top: 7px; background-color: rgb(251, 251, 251); border: none; height: 23px; width: 75px;">不翻译</div><a id="detect-no-more" href="https://api.ferryindian.com/app/static/userservice?appName=MicroCash#" style="position: fixed;left:585px;top:12px;text-decoration: none;font-size:12px !important;color:#333 !important">本网站中不再提示</a><div id="detect-cross"><img id="detect-cross-img" style="cursor: pointer !important; float: right; margin-right: 20px; margin-top: 8px; width: 18px;" src="chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/close.png"></div></div><body style="position: relative; margin-top: 36px !important;">
+<header class="header" id="page-header">
+    <span class="icon-back" onclick="window.history.go(-1)"></span><h1>pro</h1>
+</header>
+<div class="wrap">
+    <div class="content">
+        <div data-v-1b769b28="" data-v-d15e30ee=""></div><div style="mso-element:para-border-div;border:none;border-bottom:solid #3A6DBF 1.5pt;
+padding:0cm 0cm 11.0pt 0cm;background:white">
+
+            <h2 align="center" style="margin-top:0cm;margin-right:0cm;margin-bottom:11.25pt;
+margin-left:0cm;text-align:center;line-height:21.75pt;background:white;
+border:none;mso-border-bottom-alt:solid #3A6DBF 1.5pt;padding:0cm;mso-padding-alt:
+0cm 0cm 11.0pt 0cm"><span lang="EN-US微软雅黑&quot;,sans-serif;" color:black;mso-color-alt:windowtext'="">User Registration Protocol</span><span lang="EN-US微软雅黑&quot;,sans-serif&#39;"><o:p></o:p></span></h2>
+
+        </div><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">MicroCash (here in after referred to as "the software")
+            is operated by the our company and its affiliated entities (here in after
+            referred to as "us"), and we provide you with
+            relevant services related to this registration agreement in accordance with the
+            following registration agreement. Please read this registration agreement
+            carefully before using the software service. Only when you fully agree to all
+            the registration agreements can you become a user ("user") of the
+            software and use the corresponding services. By clicking the "agree to
+            user registration agreement" button during your registration as the
+            software user, you have read and expressly agreed to abide by this registration
+            agreement and all terms, policies and guidelines incorporated by reference, and
+            are bound by these rules (collectively, "this registration
+            agreement"). We may modify this registration agreement from time to time
+            according to the requirements of laws and regulations or the needs of business
+            operation. Unless otherwise specified, any change or modification will take
+            effect immediately when the revised content is released by the software, and
+            your use and continued use of the software will indicate your acceptance of
+            such change or modification. If you do not agree with the entire provisions of
+            this registration agreement (including any changes we may make to it or other
+            rules quoted therein from time to time), do not use all services provided by the
+            software, or you may voluntarily cancel the services provided by the software.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">In order to facilitate your understanding of the terms
+            and conditions applicable to your use of the software, we will publish our
+            amendments to this registration agreement on the software, and you shall review
+            this registration agreement and the corresponding rules incorporated by
+            reference from time to time.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'=""><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b><span lang="EN-US" style="font-size:12.0pt;font-family:
+&quot;微软雅黑&quot;,sans-serif;mso-font-kerning:0pt">I. service content<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">1.1 the specific service content of the software will be
+            updated from time to time by us according to the actual situation, including
+            but not limited to information, pictures, articles, comments, links, etc. we
+            will regularly or irregularly provide users with activity information in the
+            form of email, SMS, phone or in station letters according to the user's wishes,
+            and provide users with corresponding services. We have the final right to
+            interpret the services provided.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">1.2 the software service is for personal use only. Except
+            for our written consent, you or other users shall not use any information on the
+            software for commercial purposes.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">1.3 you shall be responsible for the relevant equipment
+            and network resources (such as personal computer, mobile phone and other
+            devices related to Internet access or mobile network) and the required expenses
+            (such as telephone fee and Internet access fee paid for Internet access) when
+            you use the software service.<o:p></o:p></span></p><p class="MsoNormal"><b><span lang="EN-US" style="font-size:12.0pt;font-family:
+&quot;微软雅黑&quot;,sans-serif;mso-font-kerning:0pt"><o:p>&nbsp;</o:p></span></b></p><p class="MsoNormal"><b><span lang="EN-US" style="font-size:12.0pt;font-family:
+&quot;微软雅黑&quot;,sans-serif;mso-font-kerning:0pt">Ⅱ. Information provision and privacy
+protection<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.1 When you visit, use the software or apply for the
+            software service, you must provide your real personal information, and you
+            should update your personal information in time according to the actual
+            changes. Protecting users' privacy is our key principle. We provide privacy
+            protection services through various technical means and strengthening internal
+            management to fully protect your personal information security.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.2 the software is not responsible for reviewing the
+            authenticity, accuracy or completeness of the personal information you provide.
+            You shall be responsible for any problems and consequences caused by the
+            untrue, inaccurate or incomplete information, and you shall guarantee us
+            against any damage or liability arising therefrom. If we find that the personal
+            information you provide is false, inaccurate or incomplete, we have the right
+            to terminate the service at our own discretion.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.3 you have expressly authorized that, for the purpose
+            of providing services, performing agreements, settling disputes and
+            safeguarding transaction security, we will provide your personal information,
+            which we collect by ourselves and through third parties, relevant information
+            when you apply for services, non-public content stored in the software when you
+            use the services and other personal data (here in after referred to as
+            "personal data" to you.</span><span style="font-size:12.0pt;
+font-family:&quot;微软雅黑&quot;,sans-serif;mso-font-kerning:0pt">）<span lang="EN-US">Enjoy the
+rights of retention, processing, use and disclosure, including but not limited
+to:<o:p></o:p></span></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(1) publicize your personal data in the software for the
+            purpose of providing services for you;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(2) obtain, evaluate, sort out and store your personal
+            data manually or automatically;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(3) use your personal data to improve the design and
+            promotion of the software;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(4) use the contact information provided by you to
+            contact you and deliver information about service and management to you;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(5) analyze and integrate your personal data and provide
+            necessary information for the completion of the service to the third party
+            providing the service for you. When the third party providing service for you
+            verifies the information with your phone, in order to ensure the quality of
+            service for you, you agree that the software will record the above verification
+            phone.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(6) when you violate the agreement signed with us or our
+            other users, disclose your personal data and the fact of breach, write your
+            breach information into the blacklist and share the data with the necessary
+            third party for our review and recourse.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(7) other necessary use and disclosure of your personal
+            data.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">You have expressly agreed that this term will not be invalidated
+            by your termination of the software service. If you suffer losses due to our
+            exercise of the rights under this clause, we shall be exempt from such losses.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.4 in order to better serve you, you agree and authorize
+            the software to conduct joint research with the third party it cooperates with,
+            and input your information obtained through this Agreement into such joint
+            research. However, the software and the third party he cooperates with shall
+            require the third party he cooperates with to keep your information obtained in
+            the joint research confidential before carrying out the joint research.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.5 in order to provide better services for you, you
+            understand and agree that when you register as a member of the software, the
+            software has the right to retrieve and save your mobile location information,
+            mobile device information, address book and other information. In addition, in
+            order to enable the institutions that ultimately provide loan services to
+            evaluate your credit more accurately, the software will send such information
+            to the institutions for the credit evaluation of your loan.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.6 if you have logged in to the software and authorized the
+            software to complete the corresponding information acquisition, when you log in
+            to the software again and select relevant products, you authorized the software
+            to automatically push the previously authorized information to the institution
+            providing financial services for you.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.7 we guarantee to adopt industry practices to protect
+            your data, but you understand that due to technical limitations, we cannot
+            ensure that the user's personal information will not be disclosed at all.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">2.8 we will not maliciously sell or provide your personal
+            data free of charge to a third party unrelated to you, except for the following
+            circumstances:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(1) obtain your explicit authorization in advance;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(2) in accordance with the requirements of relevant
+            judicial bodies or government authorities;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(3) for the purpose of safeguarding our legitimate rights
+            and interests;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(4) safeguard the public interest;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(5) to ensure the integrity and operation of the software
+            business and system.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(6) meet other legal requirements.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'=""><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b><span微软雅黑",sans-serif; mso-font-kerning:0pt'="">Ⅲ<span lang="EN-US">. use criteria<o:p></o:p></span></span微软雅黑",sans-serif;></b></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">3.1 in the process of using the software service, you
+            must abide by the relevant laws and regulations of the country, and do not
+            publish, copy, upload, distribute, store, create or otherwise disclose the
+            information containing the following contents through the software:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(1) opposing the basic principles established by the
+            constitution;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(2) endangering national security, divulging state
+            secrets, subverting state power and undermining national unity;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(3) damaging the honor and interests of the state;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(4) inciting national hatred and discrimination and
+            undermining national unity;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(5) to undermine the state's religious policies and
+            propagate evil cults and feudalistic Superstitions;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(6) spreading rumors, disturbing social order and
+            destroying social stability;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(7) Disseminating Obscene, pornographic, gambling,
+            violent, murderous, terrorist or abetting criminal, fraudulent or other
+            offensive information, data, information, text, music, sound, photo, figure,
+            code or other materials;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(8) insulting or slandering others and infringing upon
+            the legitimate rights and interests of others;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(9) other violations of the constitution, laws,
+            administrative regulations or rules and regulations;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(10) contents that may infringe others' patents,
+            trademarks, trade secrets, copyrights or other intellectual property rights or
+            exclusive rights;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(11) faking or otherwise distorting the content of your
+            association with any person or entity;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(12) promotion information, political activities,
+            advertisements or opinion collection provided without request;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(13) private information of any third party, including
+            but not limited to address, telephone number, email address, ID card number and
+            credit card number;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(14) viruses, unreliable data or other harmful,
+            destructive or harmful documents;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(15) content that is not related to the topic in the
+            interactive area where the content is located;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(16) content that, in our sole judgment, is offensive
+            enough, or restricts or hinders others from using or enjoying the interactive
+            area or the software content, or may cause us or our affiliates or other users
+            any kind of damage or liability;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(17) other contents prohibited by laws or administrative
+            regulations.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">3.2 users shall not use the software's services to engage
+            in the following activities endangering the security of Internet Information
+            Network:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(1) enter the Internet information network or use
+            Internet information network resources without permission;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(2) deleting, modifying or adding the functions of
+            Internet information network without permission;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(3) without permission, delete, modify or add data and
+            application programs stored, processed or transmitted in the Internet
+            information network;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(4) deliberately making and spreading destructive
+            programs such as computer or mobile phone viruses;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">(5) other behaviors endangering the security of Internet
+            information network.<o:p></o:p></span></p><p class="MsoNormal" style="line-height:19.5pt;mso-pagination:widow-orphan;
+background:white"><span lang="EN-US微软雅黑&quot;,sans-serif;" color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'="">3.3 we reserve the
+            right to filter, remove, screen or edit any content published or stored on the
+            software at any time for any reason without notice, and you shall be
+            responsible for backing up and replacing any content published or stored on the
+            software at your own cost and expense.<span>&nbsp; </span></span><span lang="EN-US微软雅黑&quot;,sans-serif;mso-font-kerning:" 0pt'=""><o:p></o:p></span></p><p class="MsoNormal" style="line-height:19.5pt;mso-pagination:widow-orphan;
+background:white"><span lang="EN-US微软雅黑&quot;,sans-serif;" color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'="">3.4 you are legally
+            responsible for your actions in using the software service. If you are a person
+            with limited or no capacity, your legal guardian shall bear the corresponding
+            legal liability.<span>&nbsp; </span></span><span lang="EN-US微软雅黑&quot;,sans-serif;mso-font-kerning:" 0pt'=""><o:p></o:p></span></p><p class="MsoNormal" style="line-height:19.5pt;mso-pagination:widow-orphan;
+background:white"><span lang="EN-US微软雅黑&quot;,sans-serif;" color:black;mso-color-alt:windowtext;mso-font-kerning:0pt'="">3.5 if your
+            operation affects the overall stability or integrity of the system, we will
+            suspend or terminate your operation until the relevant problems are solved.</span><span lang="EN-US微软雅黑&quot;,sans-serif;mso-bidi-font-family:" 宋体;mso-font-kerning:0pt'=""><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">Ⅳ.
+                Disclaimer<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.1
+            the software is an open platform for users to upload personal data such as
+            articles or photos to the Internet, which may be copied, reproduced, altered or
+            used for other illegal purposes by other organizations or individuals. Users
+            must be fully aware of the existence of such risks. As a network service
+            provider, we are not responsible for any statement, statement or content
+            provided by users in any forum, personal homepage or other interactive areas.
+            You expressly agree that the risks or consequences of using the software
+            service will be entirely your own responsibility, and we will not be
+            responsible for the above risks or consequences.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.2
+            if you violate this registration agreement, morality or law, or other people's
+            rights (including but not limited to intellectual property rights), we will not
+            assume any responsibility. At the same time, we are not responsible for any
+            third party sending the service or any content contained in the service through
+            the software.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.3
+            we shall not be liable for any content published, stored or uploaded by you,
+            other users or any third party or any loss or damage caused by such
+            content.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.4
+            we shall not be liable for any mistake, slander, slander, defamation, omission,
+            fallacy, obscenity, pornography or blasphemy that may be caused to you by any
+            third party through the software.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.5
+            we will not be responsible for the hacker's behavior, computer or mobile phone
+            virus, or the account and password are illegally used, stolen, tampered with or
+            lost due to your negligence in safekeeping, or the leakage of your personal
+            data caused by other websites or the software linked to this software station,
+            or the loss caused by other reasons other than the software. If you find any
+            illegal use of user accounts or security vulnerabilities, please contact us
+            immediately.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.6
+            we will not be responsible for any network service interruption or other
+            defects caused by any reason other than the software.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.7
+            we do not guarantee that the service will meet your requirements; we do not
+            guarantee that the service will not be interrupted, nor that the service will
+            be timely, safe and accurate.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.8
+            in no case shall the total liability of us arising from or in connection with
+            the use of the software, whether based on contract, warranty, tort, product
+            liability, strict liability or other theories, exceed any service fee you pay
+            us for accessing or using the software.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">4.9
+            the software provides free loan search and recommendation services. Any pre
+            charge in the process of loan is a fraud. Please be vigilant to avoid loss.</span><span lang="EN-US微软雅黑&quot;,sans-serif;mso-bidi-font-family:" 宋体;mso-font-kerning:0pt'=""><br>
+            <!--[if !supportLineBreakNewLine]--><br>
+            <!--[endif]--><o:p></o:p></span></p><p class="MsoNormal"><b><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">Ⅴ.
+                change, interruption or termination of services<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">5.1
+            if the service needs to be suspended or the service content needs to be
+            adjusted due to the need of upgrading, we will make an announcement on the
+            software as far as possible. We are not responsible for any loss caused by the
+            user's failure to browse the notice in time.<span>&nbsp;
+</span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">5.2
+            you expressly agree that we reserve to adjust the content, type and form of the
+            services provided by the software at any time according to the actual
+            situation, or authorize a third party to provide you with the services
+            originally provided by us at its own discretion. We are not responsible for any
+            loss caused to you or other users due to business adjustment. At the same time,
+            we reserve the right to change, interrupt or terminate all or part of the
+            software's services at any time.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">5.3
+            in case of any of the following circumstances, we have the right to
+            unilaterally interrupt or terminate the provision of services to you without
+            notice and without any liability to you or a third party:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(1)
+            the personal data you provided is not true;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(2)
+            you violate this registration agreement;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(3)
+            use the software platform for commercial purposes without our written
+            consent.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">5.4
+            you may, at any time, notify us to terminate the service to you or cancel the
+            software service directly. From the date of your termination or cancellation of
+            the service, we will not assume any responsibility to you in any form.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt"><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">Ⅵ.
+                intellectual property and other rights<o:p></o:p></span></b></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.1
+            users can make full use of the software platform to share information. You can
+            publish pictures and information copied from the software's personal home page
+            or this software or other websites or this software in the software, but these
+            contents must belong to the public domain or you have the right to use these
+            contents in the above-mentioned way, and you have the right to authorize,
+            agree, approve or promise these contents under this article. <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.2
+            you make the following representations and warranties for the content you
+            publish or otherwise disseminate in the software:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(1)
+            you have ownership or use rights in respect of such content; <o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(2)
+            they are legal, true, accurate and not misleading;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(3)
+            the use and publication or other dissemination of such content shall not
+            violate this registration agreement, violate any rights of any person or
+            entity, or cause harm to any person or entity.<span>&nbsp;
+</span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.3
+            without the prior written consent of the relevant content owner, you shall not
+            copy, distribute or use such content in the software for any commercial
+            purpose, and all such data or any part of such data can only be stored in a
+            computer or other electronic device for personal or non-commercial purposes.
+            Otherwise, we and / or the obligee will hold you legally liable.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.4
+            for your own content or content with right of use published or disseminated in the
+            software, you hereby agree as follows:<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(1)
+            grant us the right to use, copy, modify, adapt, translate, disseminate and
+            publish such content, create derivative works from such content, and publicly
+            display and perform such content through any medium (now known or invented in
+            the future) all over the world;<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(2)
+            grant us and our affiliates and sub licensors a right to use, at their option,
+            the names submitted by users in connection with such content; and<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">(3)
+            grant us the right to investigate the responsibility of a third party in
+            accordance with the law in case of infringement of your rights and interests in
+            the software or the content you publish in the software (but this is not our
+            obligation);<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.5
+            the content, pictures, etc. you publicly publish or disseminate in the software
+            are non confidential information, and we have no obligation to treat such
+            information as your confidential information. Without limiting the foregoing,
+            we reserve the right to use the content in an appropriate manner, including but
+            not limited to deletion, editing, modification, rejection or rejection of
+            publication. We have no obligation to pay you for the content you submit. Once
+            the content has been published in the software, we do not guarantee to provide
+            you with the opportunity to edit, delete or make other changes to the content
+            published in the software.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.6
+            if the obligee finds that the content you published in the software violates
+            its rights, and sends us a written notice in accordance with the relevant laws
+            and administrative regulations, we have the right to remove the relevant
+            content without prior notice to you, and retain the relevant data in accordance
+            with the law. You agree not to claim any compensation from us for such removal.
+            If we suffer any loss as a result, you shall compensate us for our loss
+            (including but not limited to compensation for various fees and attorney fees).<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US" 微软雅黑",sans-serif;mso-font-kerning:0pt'="">6.7
+            if you think that the content pointed out in article 6.6 does not infringe the
+            rights of other parties, you can give us a written notice stating that the
+            removed content does not infringe the rights of other parties. The written
+            notice should include the following contents: your detailed identification,
+            address, contact information, your certificate that the removed content does
+            not infringe the rights of other parties, the removed content in the software statement
+            of the location on the and the authenticity of the contents of the written
+            notice. After receiving the written notice, we have the right to decide whether
+            to restore the removed content.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">6.8 you hereby agree that if the statement in the written
+            notice in article 6.7 is untrue, you will bear all the legal liabilities
+            arising therefrom, and if we suffer any loss as a result, you shall compensate
+            us for the loss (including but not limited to the compensation for various fees
+            and attorney's fees).<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'=""><o:p>&nbsp;</o:p></span></p><p class="MsoNormal"><b><span微软雅黑",sans-serif; mso-font-kerning:0pt'="">Ⅶ<span lang="EN-US">. Special agreement<o:p></o:p></span></span微软雅黑",sans-serif;></b></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.1 in case of any violation of national laws and
+            regulations or the legitimate rights and interests of any third party in your
+            use of the service, we have the right to directly delete the information in
+            violation of the provisions, and suspend or terminate the service to you.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.2 if you use the software service to engage in any
+            illegal or infringing act, you shall be fully responsible for all the losses
+            caused to us or any third party, and you shall be responsible for making full
+            compensation and protecting us from any damages arising therefrom.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.3 you agree that we will send you any notices and
+            announcements related to the software service in the form of announcements,
+            e-mails and regular letters on important pages.<span>&nbsp;
+</span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.4 if you have any complaint about personal information
+            protection related to the software service, please contact us and we will reply
+            within 15 days after receiving the complaint.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.5 the validity, interpretation and execution of this
+            registration agreement shall be governed by the laws of the Republic of India.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.6 if this agreement is not renewed by the software,
+            after you confirm and sign this agreement again, its effect will be extended to
+            all operations when you log in to the software at this time and in the future.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.7 your authorization to the company under this
+            Agreement shall be deemed as the authorization to the company and its
+            affiliates. The company and its affiliated companies can carry out relevant
+            operations by virtue of your authorization and the agreement.<o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.8 any dispute over the content of this agreement or its
+            implementation shall be settled through friendly negotiation as much as
+            possible. If the negotiation fails, either party may file a lawsuit in the
+            people's court where the our company is located.<span>&nbsp; </span><o:p></o:p></span></p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'="">7.9 the headings in this registration agreement are for
+            convenience only and shall not affect the interpretation of the terms
+            themselves. The right of final interpretation of this registration agreement
+            belongs to our company.<o:p></o:p></span></p><p>
+
+            <style>
+                <!--
+                /* Font Definitions */
+                @font-face
+                {font-family:宋体;
+                    panose-1:2 1 6 0 3 1 1 1 1 1;
+                    mso-font-alt:SimSun;
+                    mso-font-charset:134;
+                    mso-generic-font-family:auto;
+                    mso-font-pitch:variable;
+                    mso-font-signature:3 680460288 22 0 262145 0;}
+                @font-face
+                {font-family:"Cambria Math";
+                    panose-1:2 4 5 3 5 4 6 3 2 4;
+                    mso-font-charset:0;
+                    mso-generic-font-family:roman;
+                    mso-font-pitch:variable;
+                    mso-font-signature:3 0 0 0 1 0;}
+                @font-face
+                {font-family:Calibri;
+                    panose-1:2 15 5 2 2 2 4 3 2 4;
+                    mso-font-charset:0;
+                    mso-generic-font-family:swiss;
+                    mso-font-pitch:variable;
+                    mso-font-signature:-536870145 1073786111 1 0 415 0;}
+                @font-face
+                {font-family:微软雅黑;
+                    panose-1:2 11 5 3 2 2 4 2 2 4;
+                    mso-font-charset:134;
+                    mso-generic-font-family:swiss;
+                    mso-font-pitch:variable;
+                    mso-font-signature:-2147483001 672087122 22 0 262175 0;}
+                @font-face
+                {font-family:"\@微软雅黑";
+                    mso-font-charset:134;
+                    mso-generic-font-family:swiss;
+                    mso-font-pitch:variable;
+                    mso-font-signature:-2147483001 672087122 22 0 262175 0;}
+                @font-face
+                {font-family:"\@宋体";
+                    panose-1:2 1 6 0 3 1 1 1 1 1;
+                    mso-font-charset:134;
+                    mso-generic-font-family:auto;
+                    mso-font-pitch:variable;
+                    mso-font-signature:3 680460288 22 0 262145 0;}
+                /* Style Definitions */
+                p.MsoNormal, li.MsoNormal, div.MsoNormal
+                {mso-style-unhide:no;
+                    mso-style-qformat:yes;
+                    mso-style-parent:"";
+                    margin:0cm;
+                    margin-bottom:.0001pt;
+                    text-align:justify;
+                    text-justify:inter-ideograph;
+                    mso-pagination:none;
+                    font-size:10.5pt;
+                    mso-bidi-font-size:11.0pt;
+                    font-family:"Calibri",sans-serif;
+                    mso-ascii-font-family:Calibri;
+                    mso-ascii-theme-font:minor-latin;
+                    mso-fareast-font-family:宋体;
+                    mso-fareast-theme-font:minor-fareast;
+                    mso-hansi-font-family:Calibri;
+                    mso-hansi-theme-font:minor-latin;
+                    mso-bidi-font-family:"Times New Roman";
+                    mso-bidi-theme-font:minor-bidi;
+                    mso-font-kerning:1.0pt;}
+                h2
+                {mso-style-priority:9;
+                    mso-style-qformat:yes;
+                    mso-style-link:"标题 2 字符";
+                    mso-style-next:正文;
+                    margin-top:13.0pt;
+                    margin-right:0cm;
+                    margin-bottom:13.0pt;
+                    margin-left:0cm;
+                    text-align:justify;
+                    text-justify:inter-ideograph;
+                    line-height:173%;
+                    mso-pagination:lines-together;
+                    page-break-after:avoid;
+                    mso-outline-level:2;
+                    font-size:16.0pt;
+                    font-family:"Calibri Light",sans-serif;
+                    mso-ascii-font-family:"Calibri Light";
+                    mso-ascii-theme-font:major-latin;
+                    mso-fareast-font-family:宋体;
+                    mso-fareast-theme-font:major-fareast;
+                    mso-hansi-font-family:"Calibri Light";
+                    mso-hansi-theme-font:major-latin;
+                    mso-bidi-font-family:"Times New Roman";
+                    mso-bidi-theme-font:major-bidi;
+                    mso-font-kerning:1.0pt;}
+                span.2
+                {mso-style-name:"标题 2 字符";
+                    mso-style-priority:9;
+                    mso-style-unhide:no;
+                    mso-style-locked:yes;
+                    mso-style-link:"标题 2";
+                    mso-ansi-font-size:16.0pt;
+                    mso-bidi-font-size:16.0pt;
+                    font-family:"Calibri Light",sans-serif;
+                    mso-ascii-font-family:"Calibri Light";
+                    mso-ascii-theme-font:major-latin;
+                    mso-fareast-font-family:宋体;
+                    mso-fareast-theme-font:major-fareast;
+                    mso-hansi-font-family:"Calibri Light";
+                    mso-hansi-theme-font:major-latin;
+                    mso-bidi-font-family:"Times New Roman";
+                    mso-bidi-theme-font:major-bidi;
+                    mso-font-kerning:1.0pt;
+                    font-weight:bold;}
+                .MsoChpDefault
+                {mso-style-type:export-only;
+                    mso-default-props:yes;
+                    font-size:10.0pt;
+                    mso-ansi-font-size:10.0pt;
+                    mso-bidi-font-size:10.0pt;
+                    font-family:"Calibri",sans-serif;
+                    mso-bidi-font-family:"Times New Roman";
+                    mso-bidi-theme-font:minor-bidi;
+                    mso-font-kerning:0pt;}
+                /* Page Definitions */
+                @page
+                {mso-page-border-surround-header:no;
+                    mso-page-border-surround-footer:no;}
+                @page WordSection1
+                {size:595.3pt 841.9pt;
+                    margin:72.0pt 90.0pt 72.0pt 90.0pt;
+                    mso-header-margin:42.55pt;
+                    mso-footer-margin:49.6pt;
+                    mso-paper-source:0;
+                    layout-grid:15.6pt;}
+                div.WordSection1
+                {page:WordSection1;}
+                -->
+            </style>
+        </p><p class="MsoNormal"><span lang="EN-US微软雅黑&quot;,sans-serif;" mso-font-kerning:0pt'=""><o:p>&nbsp;</o:p></span></p>
+    </div>
+
+</div>
+
+<script>
+    var pageUrl = window.location.href;
+    if(/inh5/gi.test(pageUrl)) {
+        document.getElementById('page-header').style.display = "block"
+    }
+    if(/ybfq/gi.test(pageUrl)) {
+        document.getElementById('page-header').classList.add("ybfq-header")
+    }
+</script>
+
+
+<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ccfjcepmiaackkccabgeeegeklgifffd/imgs/map/tip-arrow-top.png&quot;);"></div></div></body></html>

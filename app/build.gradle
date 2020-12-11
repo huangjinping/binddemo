@@ -1,0 +1,221 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+kapt {
+    generateStubs = true
+}
+def config = rootProject.ext.appConfig
+
+android {
+    compileSdkVersion 28
+    flavorDimensions "default"
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "con.modhe.uncash"
+        minSdkVersion 21
+        compileSdkVersion 28
+        versionCode 8
+        versionName "1.8"
+        multiDexEnabled true
+
+//        ndk {
+//            abiFilters "armeabi-v7a" // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+//        }
+    }
+
+    signingConfigs {
+        uncash {
+            keyAlias 'uncash'
+            keyPassword 'uncash123456'
+            storeFile file('uncash.jks')
+            storePassword 'uncash123456'
+        }
+        moneybag {
+            keyAlias 'moneybag'
+            keyPassword 'moneybag123'
+            storeFile file('moneybag.jks')
+            storePassword 'moneybag123'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+//            shrinkResources false
+            buildConfigField "boolean", "APP_DEBUG", "true"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "APP_DEBUG", "false"
+//            //是否进行zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+
+        }
+
+    }
+
+
+    applicationVariants.all { variant ->
+        def buildTypeName = variant.buildType.name
+        String time = null;
+        if ("debug".equalsIgnoreCase(buildTypeName)) {
+            time = buildTime()
+        } else {
+            time = buildTime()
+        }
+        variant.outputs.all { output ->
+            outputFileName = "${buildTypeName}_${variant.productFlavors[0].name}_.apk"
+        }
+    }
+
+    productFlavors {
+
+        microCash {
+            applicationId "con.modhe.uncash"
+            versionCode 10
+            versionName "1.0"
+            signingConfig signingConfigs.uncash
+            manifestPlaceholders = [
+                    UMENG_CHANNEL_VALUE: "microCash",
+                    google_maps_key    : "AIzaSyDcNPZ-vsWhdLa4Zf6SsRW9GbWLFO8WB_I"
+            ]
+            buildConfigField "String", "appssid", '"01"'
+            buildConfigField "String", "HTTP_DOMAIN", '"http://api.app.two/"'
+            resValue "bool", "is_show_wechat_pay", 'true'
+            buildConfigField "String", "appssid", '"01"'
+            buildConfigField "String", "appssid", '"01"'
+
+        }
+
+    }
+
+//    productFlavors.all {
+//        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    repositories {
+
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+def buildTime() {
+    return new Date().format("yyyy-MM-dd_HH-mm-ss")
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    kapt "com.android.databinding:compiler:3.0.1"
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'com.jakewharton:disklrucache:2.0.2'
+    implementation project(path: ':multitype-adapter')
+    def lifecycle_version = "2.0.0"
+    // alternatively - Lifecycles only (no ViewModel or LiveData). Some UI
+    //     AndroidX libraries use this lightweight import for Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+
+    // For Kotlin use kapt instead of annotationProcessor
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha03'
+
+//    implementation 'io.reactivex:rxjava:1.1.6'
+//    implementation 'io.reactivex:rxandroid:1.2.1'
+
+
+
+
+//    implementation 'io.reactivex.rxjava2:rxjava:2.1.4'
+//    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+//    implementation("com.squareup.okhttp3:okhttp:4.8.1")
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit-mock:2.9.0'
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+
+
+//    def work_version = "1.0.0-alpha11"
+//
+//    implementation("android.arch.work:work-runtime:$work_version") {
+//        exclude group: 'com.google.guava', module: 'listenablefuture'
+//    }
+//    implementation("android.arch.work:work-firebase:$work_version") {
+//        exclude group: 'com.google.guava', module: 'listenablefuture'
+//    }
+//    androidTestImplementation "android.arch.work:work-testing:$work_version"
+    def work_version = "1.0.0-alpha11"
+
+    implementation "android.arch.work:work-runtime:$work_version"
+
+    // optional - Firebase JobDispatcher support
+    implementation "android.arch.work:work-firebase:$work_version"
+
+    // optional - Test helpers
+    androidTestImplementation "android.arch.work:work-testing:$work_version"
+
+    // gradle
+    implementation 'com.alibaba.android:tangram:2.0.5@aar'
+
+// 最新版本引入了rxjava，需要自行添加rx依赖
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.12'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.alibaba:fastjson:1.1.54.android@jar'
+
+    implementation 'com.to.aboomy:pager2banner:1.0.1' //最新版本
+
+
+    implementation 'com.github.saeed-younus:finite-cover-flow:1.0.1'
+
+
+}

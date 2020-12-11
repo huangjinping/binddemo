@@ -1,0 +1,355 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="loanRecord">loan record</string>
+    <string name="myProfile">my profile</string>
+    <string name="bankAccount">bank account</string>
+    <string name="settings">Settings</string>
+    <string name="loginDesc">Registration  with  the  mobile number  which  is linked  to your Aadhaar  card </string>
+    <string name="privacyPolicy">I have read  and  agreed to the Terms of  Service and  Privacy Policy</string>
+    <string name="getVerificationCode">Get Verification Code</string>
+    <string name="toLogin">立即登录</string>
+    <string name="phone">手机号</string>
+    <string name="verification_hint">请输入验证码</string>
+    <string name="password_hint">请输入6-16数字与字母组合</string>
+    <string name="fotgotpassword">忘记密码?</string>
+    <string name="inputVerificationTitle">请输入图形验证码</string>
+    <string name="home">首页</string>
+    <string name="order">账单</string>
+    <string name="mine">我的</string>
+
+
+    <!--完善信息-->
+    <string name="livingCity">现居住城市</string>
+    <string name="livingAddress">现居住地址</string>
+    <string name="addressHint">请输入详细地址，精确到门牌号</string>
+    <string name="highestEducation">最高学历&#160;&#160;&#160;&#160;</string>
+    <string name="select">select</string>
+
+
+    <!--    theme-->
+    <string name="sign_red">e6edc00f13</string>
+    <string name="sign_blue">f680561143e</string>
+    <string name="sign_yello">ff9c5d2a323</string>
+    <string name="package_name">com.hjp.cese</string>
+
+    <!--账单-->
+    <string name="orderWaitingRepay">Repayment</string>
+    <string name="historyOrder">History Order</string>
+    <string name="orderNotice">逾期会产生费用，及时还款有助于提额度！</string>
+    <string name="orderGuidance">“ 逾期后您将失去展期特权，并持续产生逾期费. ”</string>
+    <string name="repayAfter7Days">展期需支付展期费用，支付后可以延迟7天还款</string>
+    <string name="justExhibition">（支付展期费用不会减少还款额，只是获得延期还款资格。)</string>
+    <string name="whatIsExhibition">什么是展期？</string>
+    <string name="packUp">点击收起</string>
+    <string name="deadLine">还款截止时间</string>
+    <string name="amountRepay">待还金额（元）</string>
+    <string name="dedit">违约金（元）&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="amountOverdue">逾期费（元）&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="repay">还款</string>
+    <string name="period">借款期限(天）</string>
+    <string name="deadlineDate">还款截止时间</string>
+    <string name="nextAmount">下期应还金额（元）</string>
+    <string name="checkOrderDetail">查看订单详情</string>
+    <string name="defaultPayment">默认支付</string>
+    <string name="addBankCard">+&#160;&#160;&#160;&#160;添加银行卡</string>
+    <string name="exhibitionRepay">展期还款</string>
+    <string name="exhibitionNow">立即展期</string>
+    <string name="repayNow">立即还款</string>
+    <string name="exhibition">展期</string>
+    <string name="defaultPay">默认支付</string>
+    <string name="exhibitionInstraction">展期将产生一笔新订单，7天后仍需偿还1390元</string>
+    <string name="deferNewOrder">展期后新订单</string>
+    <string name="congratulationRepay">恭喜你已完成还款！</string>
+    <string name="fastPayment">快捷支付</string>
+    <string name="noOrder">No bills</string>
+    <string name="noOrderInfo">At present, you have no bill information</string>
+
+    <!--首页-->
+    <string name="condition">申请条件</string>
+    <string name="idCard">二代身份证</string>
+    <string name="edg18to45">年龄18-45周岁</string>
+    <string name="homePhone">常用手机号</string>
+    <string name="homeTip">满足条件获得机审下款资格，低利率，无回访。</string>
+    <string name="repayOnTime">及时还款有助于提额并享有VIP下款通道</string>
+    <string name="speeding">正在加速为您放款，请注意查收</string>
+    <string name="refresh">正在处理您的还款，下拉刷新查看实时结果</string>
+    <string name="confirm">正在处理您的还款，请稍等</string>
+    <string name="yuqidaihuan">逾期会产生逾期费用，请及时还款</string>
+    <string name="checking">您的订单已经进入审核</string>
+    <string name="waitingCheck">您的订单已受理，等待审核中</string>
+    <!--dialog-->
+    <string name="genju">根据您良好的信用表现</string>
+    <string name="xiangshouVIP">现在借款享VIP下款通道</string>
+    <string name="qianwangVIP">前往VIP通道</string>
+    <string name="google_maps_key">AIzaSyDcNPZ-vsWhdLa4Zf6SsRW9GbWLFO8WB_I</string>
+
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="last_update_time_label">Last location update time</string>
+
+    <string name="start_updates">Start updates</string>
+    <string name="stop_updates">Stop updates</string>
+
+    <string name="location_settings_inadequate_warning">The location settings on the device are not
+        adequate to run this sample. Fix in Settings.</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+
+    <string name="request_eirr">request result error,please  get  after again</string>
+
+
+    <!--首页-->
+    <string name="submit_info">Submit info</string>
+    <string name="get_credit">Get Credit</string>
+    <string name="get_Money">Get Money</string>
+    <string name="apply">apply</string>
+    <string name="maxium_loan">Maxium Loan Amuount Upto</string>
+    <string name="unit">₹</string>
+    <string name="machine_audit">Machine audit</string>
+    <string name="minute_loan">3-minute loan</string>
+    <string name="pase_rate">Pass rate 96%</string>
+    <string name="alertTitle">alert</string>
+    <string name="permissDeniedAlert">Because you open too few permissions, which affects the use, please set permissions</string>
+    <!--我的-->
+    <string name="authCentre">My Profile</string>
+    <string name="bankCardManager">My BankAccount</string>
+    <string name="contactService">Contact Service</string>
+    <string name="aboutUs">About Us</string>
+    <string name="FAQ">FAQ</string>
+    <string name="setting">setting</string>
+    <string name="loanMessage">Loan Message</string>
+    <string name="systemMessage">System Message</string>
+    <string name="changePsw">Change Password</string>
+    <string name="changeLanguage">Change Language</string>
+    <string name="logout">Log Out</string>
+    <string name="personalInformationBefore">Please verify your personal information first</string>
+    <string name="authenticationBefore">Please verify your authentication Before first</string>
+
+
+    <!--login&&register-->
+    <string name="maxLimit"></string>
+    <string name="limit10000">Register/Login</string>
+    <string name="phoneNumber">phone</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="sure">submit</string>
+    <string name="next">next</string>
+    <string name="forgetPassword">fotgot?</string>
+    <string name="emptyVerificationCode">Please enter the verification code</string>
+    <string name="loginRightNow">Login Now</string>
+    <string name="registerRightNow">Register Now</string>
+    <string name="hintPassword">The password is composed of 6-16 alphanumeric characters</string>
+    <string name="getCode">Get OTP</string>
+    <string name="getCodeAgain">Get OTP</string>
+    <string name="secondsLater">processing</string>
+    <string name="agreementStr">I have read and agreed to the Terms of Service&#38;Privacy Policy</string>
+    <string name="agreementTarget">Privacy Policy</string>
+
+
+    <string name="inputImgCode">Please enter the graphic verification code</string>
+    <string name="inputSmsCode">Please enter the verification code</string>
+    <string name="registered">Complete registration and get the highest</string>
+    <string name="agreement">I have read and agreed to the Privacy Policy</string>
+    <string name="inputOrgPsw">Please enter the original password</string>
+    <string name="verifyPsw">Please enter the password again</string>
+    <string name="mobileNumberEmpty">Mobile number cannot be empty</string>
+    <string name="mobileNumberEirror">Please enter the correct mobile number</string>
+    <string name="mobileNumberFormatEirror">Incorrect format of mobile number</string>
+
+    <!--认证-->
+    <string name="completeAuth">Wake up the quota immediately after completing the certification</string>
+    <string name="idAuth"> Authentication</string>
+    <string name="personalInformation"> personal Information</string>
+    <string name="personal"> Personal</string>
+    <string name="contact">Contact</string>
+    <string name="contactAuth">Contact Information</string>
+    <string name="creditAuth">Credit Certification</string>
+    <string name="authSucceed">Verified</string>
+    <string name="waitingAuth">Not Verified</string>
+    <string name="authenticating">Certification</string>
+    <string name="arouse">arouse  quota</string>
+    <string name="plzScanIDCard">Please scan your ID card</string>
+    <string name="plzScanFace">Please conduct face authentication</string>
+    <string name="idCardNumber">Card Number</string>
+    <string name="clickScanFront">Click Scan Front</string>
+    <string name="clickScanBack">Click Scan Back</string>
+    <string name="startFace">Please face the mobile phone</string>
+    <string name="faceFailed">Face authentication failed</string>
+    <string name="faceSucceed">Face verification successful</string>
+    <string name="zhimaAuth">Sesame sub certification</string>
+    <string name="operateAuth">Operator certification</string>
+    <string name="service">service&#160;&#160;010-53542851</string>
+    <string name="serviceNumber">010-53542851</string>
+    <string name="scanAgain">Re scan</string>
+    <string name="beConfirmed">Confirmed</string>
+    <string name="confirmIDCard">Please check the identity information</string>
+    <string name="server_exception">Server exception, please try again later</string>
+
+
+    <!--    pan font-->
+    <string name="panFontTitle">PAN Front</string>
+
+    <!--    aadhaar font-->
+    <string name="aadhaarTitle">Aadhaar</string>
+    <!--    idcard-->
+    <string name="idCardTitle">Authentication</string>
+    <string name="panFont">PAN Front</string>
+    <string name="aadhaarFont">Aadhaar Front</string>
+    <string name="aadhaarBack">Aadhaar Back</string>
+    <string name="checkPanCard">Please check the pan card</string>
+    <string name="checkAadhaarFontCard">Please check the Aadhaar  card Front</string>
+    <string name="checkAadhaarBackCard">Please check the Aadhaar  card Back</string>
+    <string name="example_title">Correct example</string>
+    <string name="example_desc">please take your identity picture information in a flat place</string>
+    <string name="example_type_desc_01">Not Clear</string>
+    <string name="example_type_desc_02">Have flash</string>
+    <string name="example_type_desc_03">Incomplete</string>
+
+
+    <!-- personl-->
+    <string name="personlTitle">Personal Information</string>
+    <string name="emailRightEmpty">Please input the email correctly</string>
+    <string name="maritalRightEmpty">Please select the marital status</string>
+    <string name="educationRightEmpty">Please select education level</string>
+    <string name="spouseNameRightEnter">Please enter your spouse name</string>
+    <string name="homeAddressEmpty">Please select  home address</string>
+    <string name="homeFullAddressEmpty">Please enter your home full address</string>
+    <string name="homePinCode">Please enter the family detailed address Pin Code</string>
+    <string name="accommodationTypeEmpty">Please  select accommodationType</string>
+    <string name="workTypeEmpty">Please  select workType</string>
+    <string name="companyNameEmpty">Please enter  companyName</string>
+    <string name="payMethodEmpty">Please select payMethod</string>
+    <string name="professionEmpty">Please enter profession</string>
+    <string name="occupationEmpty"> Please enter occupation</string>
+    <string name="workYearEmpty">Please enter work Year</string>
+    <string name="workAddressEmpty">Please enter work Address</string>
+    <string name="workPinCodeEmpty"> Please enter  work Pin Code</string>
+    <string name="workFullAddressEmpty">Please enter work Full Address</string>
+    <string name="incomeEmpty"> Please enter  income</string>
+    <string name="email">Email</string>
+    <string name="emailHint">input  your email</string>
+    <string name="educationalQualification">Educational Qualification</string>
+    <string name="maritalStatus">Marital Status</string>
+    <string name="spouseName">Spouse Name</string>
+    <string name="spouseNameHint">input  your Spouse,s  Name</string>
+    <string name="numberChildren">Number of children</string>
+    <string name="familyMonthlySalary">Family Monthly Salary</string>
+    <string name="familyMonthlySalaryHint">input  your Family Monthly Salary</string>
+    <string name="homeAddress">Home Address</string>
+    <string name="fullAddress">Full Address</string>
+    <string name="fullAddressHint">input  full Address</string>
+    <string name="pinCode"> Code Pin</string>
+    <string name="pinCodeHint">input  Pin Code</string>
+    <string name="typeAccommodation">Type  of  Accommodation</string>
+    <string name="workType">Work Type</string>
+    <string name="companyName">Company Name</string>
+    <string name="companyNameHint">input  Company Name</string>
+    <string name="payMethod">Pay Method</string>
+    <string name="workProfession">Work Profession</string>
+    <string name="Occupation">Occupation</string>
+    <string name="workYears">Work Years</string>
+    <string name="workAdress">Work Address</string>
+    <string name="monthlyIncome">Monthly Income</string>
+    <string name="monthlyIncomeHint">input Monthly Income</string>
+    <string name="currentPositioning">Current Positioning</string>
+
+
+    <!--联系人-->
+    <string name="contactTitle">Contact Information</string>
+    <string name="emergencyContact">Emergency Contact</string>
+    <string name="otherContact">Other Contacts</string>
+    <string name="inputParent">（Please fill in spouse or parent information）</string>
+    <string name="selectContact">+&#160;Select contacts</string>
+    <string name="selectRelation">select relation</string>
+    <string name="relationship">relation&#160;&#160;&#160;&#160;</string>
+    <string name="name">name&#160;&#160;&#160;&#160;</string>
+    <string name="inputName">Please enter name</string>
+    <string name="inputPhoneNumber">Please enter your mobile number</string>
+
+    <!--银行卡-->
+    <string name="bankListAccount">Bank Account</string>
+    <string name="bankTitle">Bank card information</string>
+    <string name="bankCardIntent">The bound bank card number will be used for repayment</string>
+    <string name="cardHolder">Full Name</string>
+    <string name="cardHolderHint">input  full name</string>
+    <string name="openingBank">Bank Name</string>
+    <string name="IFSCCode">IFSC Code</string>
+    <string name="IFSCCodeHint">input  IFSC code</string>
+    <string name="bankCardNum">Bank account number</string>
+    <string name="bankCardNumHint">input  bank account number</string>
+    <string name="verificationCode">verification Code</string>
+
+    <!--appleLoanActivity-->
+    <string name="applyAmountEmpty">applyAmount  not Empty</string>
+    <string name="loanPurposeEmpty">Please select loan purpose</string>
+    <string name="loanTermEmpty">Please select loan term</string>
+
+    <!--    order list-->
+    <string name="loanDeadline">Loan term</string>
+    <string name="loanApplyDate">apply Date</string>
+
+
+    <!--    living-->
+    <string name="livingTitle">Living Recognition</string>
+    <string name="living_str_01">Please dress neatly, look up at the screen and face the light source</string>
+    <string name="living_str_02">NO veil</string>
+    <string name="living_str_03">No Look up</string>
+    <string name="living_str_04">No eyes</string>
+    <string name="living_again">living  fail,please living again</string>
+
+
+    <!--    change Language-->
+    <string name="setting_language_auto">跟随系统</string>
+    <string name="setting_language_english">English</string>
+    <string name="setting_simplified_chinese">简体中文</string>
+    <string name="setting_traditional_chinese">繁體中文</string>
+    <string name="setting_language">language setting</string>
+    <string name="setting_language_indonesan">印度语设置</string>
+
+
+    <!--借款-->
+    <string name="loanLimit">借款额度</string>
+    <string name="loanDuration">借款时长</string>
+    <string name="max1000">最高为10000元</string>
+    <string name="yuan10000">10000</string>
+    <string name="mostLimit">最高可领</string>
+    <string name="fakeTip">* 实际借款额度以最终审批为准。</string>
+    <string name="loanAmount">借款金额（元）</string>
+    <string name="creditAccount">收款账户</string>
+    <string name="arrivalAmount">到账金额</string>
+    <string name="loanDetail">借款详情</string>
+    <string name="check">open</string>
+    <string name="changeInfo">修改个人信息</string>
+    <string name="plzRead">请阅读并同意</string>
+    <string name="loanAgreement">《借款服务协议》</string>
+    <string name="confirmLoan">确认借款</string>
+    <string name="confirm1min">确认放款后1分钟即可到账</string>
+    <string name="days">days</string>
+
+    <!-- apple Loan-->
+    <string name="appleLoanTitle">Loan Application</string>
+    <!--apple sucess-->
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="appleSuccessTitle">Success</string>
+    <string name="appleSuccessAlert">Your loan Application has been successfully submitted. Verification processing.</string>
+
+    <!--    payment-->
+    <string name="paymentTitle">Repayment Details</string>
+    <string name="paymentSuccessAlert">Repayment Successfully!</string>
+    <!--    order list-->
+    <string name="orderListTitle">history order</string>
+    <string name="order_open">open</string>
+
+    <!--    payment success-->
+    <string name="ps_alert_title">Repayment Success</string>
+    <string name="ps_repayment_amuount">Repayment Amount</string>
+    <string name="ps_next">Back to Home</string>
+    <!--    history order-->
+    <string name="orderDetailTitle">Loan Details</string>
+    <string name="extendedRepaymentTitle">Extended Repayment Record</string>
+
+</resources>

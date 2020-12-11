@@ -1,0 +1,25 @@
+<resources>
+    <declare-styleable name="InputTextView">
+        <attr name="inputTextType">
+            <enum name="text" value="1"/>
+            <enum name="numberNormal" value="2"/>
+            <enum name="password" value="3"/>
+            <enum name="phone" value="4"/>
+        </attr>
+        <attr name="inputName" format="string"/>
+        <attr name="inputText" format="string"/>
+        <!--<attr name="exampleDimension" format="dimension"/>-->
+        <!--<attr name="exampleColor" format="color"/>-->
+        <attr name="rightDrawableIcon" format="reference"/>
+        <attr name="leftDrawableIcon" format="reference"/>
+        <attr name="enableEdit" format="boolean"/>
+        <attr name="inputHint" format="string|reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="multitextstyle">
+        <attr name="format_style" format="string"></attr>
+        <attr name="ban_paste" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

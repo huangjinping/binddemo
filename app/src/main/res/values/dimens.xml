@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_9">9dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_19">19dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_21">21dp</dimen>
+    <dimen name="dimen_23">23dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_26">26dp</dimen>
+    <dimen name="dimen_27">27dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
+    <dimen name="dimen_66">66dp</dimen>
+    <dimen name="dimen_35">35dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_42">42dp</dimen>
+    <dimen name="dimen_46">46dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_72">72dp</dimen>
+    <dimen name="dimen_90">90dp</dimen>
+    <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_127">127dp</dimen>
+    <dimen name="dimen_160">160dp</dimen>
+    <dimen name="dime_spacing_10">10dp</dimen>
+
+    <dimen name="dimen_269">269dp</dimen>
+    <dimen name="dimen_203">203dp</dimen>
+    <dimen name="dimen_110">110dp</dimen>
+    <dimen name="dimen_text_28">@dimen/dimen_14</dimen>
+    <dimen name="dimen_text_32">@dimen/dimen_16</dimen>
+    <dimen name="dimen_text_36">@dimen/dimen_18</dimen>
+    <dimen name="dimen_text_48">@dimen/dimen_24</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="default_text_size">16sp</dimen>
+
+    <dimen name="small_margin">10dp</dimen>
+</resources>

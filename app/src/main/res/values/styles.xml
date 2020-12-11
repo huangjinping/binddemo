@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="nav_Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppThemeNoBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppThemeNoBar2">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+
+    <style name="ActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#3492E9</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#3492E9</item>
+    </style>
+
+
+    <!-- 动画 主题 -->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/righttoleft_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/righttoleft_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/lefttoright_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/lefttoright_out</item>
+    </style>
+
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--item RadioButton or CheckBox color-->
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!--item text color-->
+        <item name="textColorAlertDialogListItem">@android:color/white</item>
+        <!--buttons color-->
+        <item name="colorAccent">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="IndicateText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#33000000</item>
+    </style>
+
+
+</resources>

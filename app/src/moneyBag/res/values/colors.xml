@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F1697</color>
+    <color name="bg_gray_light_half">#91000000</color>
+    <color name="common_background_01">#ffffff</color>
+    <color name="colorPrimaryDark">#3F1697</color>
+    <color name="colorAccent">#3F1697</color>
+    <color name="colorButtonClicked">#FAE97E</color>
+    <color name="colorButton">#ffaa00</color>
+    <color name="transparent">#00000000</color>
+    <color name="bgGray">#F5F5F5</color>
+    <color name="BBBBBB">#BBBBBB</color>
+    <color name="bgScanIdCard">#F3F6FE</color>
+    <color name="titleColor">#FAFAFA</color>
+    <color name="cbLoanUncheck">#E4E4E4</color>
+    <color name="exhibition">#FFFADD</color>
+    <color name="redDot">#FF3030</color>
+    <color name="colorFakeBackground">#fff9eb</color>
+
+
+</resources>
